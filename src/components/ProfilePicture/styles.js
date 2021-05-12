@@ -1,16 +1,16 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
-        margin: 10,
-        height: 86,
-        width: 86,
+        margin: 5,
+        height: 76,
+        width: 76,
         borderRadius: 40,
         borderWidth: 3,
         borderColor: '#c832fa',
     },
     ProfilePicture: {
-        height: 80,
-        width: 80,
+        height: 70,
+        width: 70,
         borderRadius: 40,
         borderWidth: 3,
         borderColor: '#ffffff',

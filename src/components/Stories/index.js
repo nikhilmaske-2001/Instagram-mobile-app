@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import Story from '../Story';
 
 const data = [
@@ -15,17 +15,29 @@ const data = [
     }, {
         imageUri: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         name: 'Github',
+    }, {
+        imageUri: "https://i.pinimg.com/originals/91/9d/f0/919df067a8fbd22ce7b6f401b7688b35.png",
+        name: 'Whatsapp',
+    }, {
+        imageUri: "https://i.pinimg.com/originals/2d/2b/e2/2d2be2421911037d80f9921dc29d54c2.jpg",
+        name: 'Youtube',
+    }, {
+        imageUri: "https://i.pinimg.com/originals/c0/44/d1/c044d19025e6939e49af34610e2694d7.png",
+        name: 'LinkedIn',
+    }, {
+        imageUri: "https://cdn.worldvectorlogo.com/logos/pinterest-1.svg",
+        name: 'Printerest',
     }
 ]
 
 const Stories = () => {
     return (
-        <View>
-            <Story imageUri={data[0].imageUri} name={data[0].name} />
-            <Story imageUri={data[1].imageUri} name={data[1].name} />
-            <Story imageUri={data[2].imageUri} name={data[2].name} />
-            <Story imageUri={data[3].imageUri} name={data[3].name} />
-        </View>
+        <FlatList
+            data={data}
+            horizontal
+            keyExtractor={({ name }) => name}
+            renderItem={({ item }) => <Story imageUri={item.imageUri} name={item.name} />}
+        />
     );
 };
 
