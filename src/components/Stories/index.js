@@ -35,6 +35,7 @@ const Stories = () => {
         <FlatList
             data={data}
             horizontal
+            showsHorizontalScrollIndicator={false}
             keyExtractor={({ name }) => name}
             renderItem={({ item }) => <Story imageUri={item.imageUri} name={item.name} />}
         />
