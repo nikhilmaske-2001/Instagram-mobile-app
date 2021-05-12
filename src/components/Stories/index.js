@@ -25,7 +25,7 @@ const data = [
         imageUri: "https://i.pinimg.com/originals/c0/44/d1/c044d19025e6939e49af34610e2694d7.png",
         name: 'LinkedIn',
     }, {
-        imageUri: "https://cdn.worldvectorlogo.com/logos/pinterest-1.svg",
+        imageUri: "https://i.pinimg.com/474x/13/bc/eb/13bceb594ac9faf0ecd37638c81ffea7.jpg",
         name: 'Printerest',
     }
 ]

@@ -5,11 +5,11 @@ import Footer from '../Post/components/Footer';
 import { View } from 'react-native';
 
 
-const Post = () => {
+const Post = ({ post }) => {
     return (
         <View>
-            <Header />
-            <Body />
+            <Header imageUri={post.user.imageUri} name={post.user.name} />
+            <Body imageUri={post.imageUri} />
             <Footer />
         </View>
     );

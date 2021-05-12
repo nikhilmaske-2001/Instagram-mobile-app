@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const Footer = () => {
     return (
         <View>
-            <Text>Header</Text>
+            <Text>Footer</Text>
         </View>
     )
 };
