@@ -19,7 +19,7 @@ const Footer = ({ likesCount, caption, postedAt }) => {
             <View style={styles.iconContainer}>
                 <View style={styles.leftIcons}>
                     <TouchableWithoutFeedback onPress={onLikeClicked}>
-                        {isLiked ? <AntDesign name="heart" size={25} color={'#ed2887'} />
+                        {isLiked ? <AntDesign name="heart" size={25} color={'#ff1212'} />
                             : <AntDesign name="hearto" size={25} color={'#545454'} />
                         }
                     </TouchableWithoutFeedback>
