@@ -10,7 +10,7 @@ const post = {
     imageUri: "https://i.pinimg.com/originals/37/28/7d/37287df47571dd2ca5949a4968366efe.jpg",
     likesCount: "1234",
     caption: "Beautiful nature picture",
-    postedAt: "5 minuted ago",
+    postedAt: "5 minutes ago",
 }
 
 const HomeScreen = () => {
