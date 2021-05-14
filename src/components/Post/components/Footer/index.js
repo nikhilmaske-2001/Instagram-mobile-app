@@ -12,14 +12,14 @@ const Footer = ({ likesCount: likesCountProps, caption, postedAt }) => {
     const [likesCount, setLikesCount] = useState(0);
 
     const onLikeClicked = () => {
+        setIsLike(!isLiked);
         const ammount = isLiked ? -1 : 1;
         setLikesCount(likesCount + ammount);
-        setIsLike(!isLiked);
     };
 
     useEffect(() => {
         setLikesCount(likesCountProps);
-    });
+    }, []);
 
     return (
         <View style={styles.container}>
@@ -37,7 +37,7 @@ const Footer = ({ likesCount: likesCountProps, caption, postedAt }) => {
                     <FontAwesome name="bookmark-o" size={25} color='#545454' />
                 </View>
             </View>
-            <Text style={styles.likesCount}>{likesCount}</Text>
+            <Text style={styles.likesCount}>{likesCount} Likes</Text>
             <Text style={styles.caption}>{caption}</Text>
             <Text style={styles.postedAt}>{postedAt}</Text>
         </View>
