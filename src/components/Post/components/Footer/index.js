@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -6,13 +6,20 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
-const Footer = ({ likesCount, caption, postedAt }) => {
+const Footer = ({ likesCount: likesCountProps, caption, postedAt }) => {
 
     const [isLiked, setIsLike] = useState(false);
+    const [likesCount, setLikesCount] = useState(0);
 
     const onLikeClicked = () => {
+        const ammount = isLiked ? -1 : 1;
+        setLikesCount(likesCount + ammount);
         setIsLike(!isLiked);
     };
+
+    useEffect(() => {
+        setLikesCount(likesCountProps);
+    });
 
     return (
         <View style={styles.container}>
