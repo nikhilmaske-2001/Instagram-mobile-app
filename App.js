@@ -16,6 +16,9 @@ import Foundation from 'react-native-vector-icons/Foundation';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Image } from 'react-native';
+
+import logo from '../Instagram/src/assets/images/logo.png';
 
 
 const Tab = createBottomTabNavigator();
@@ -25,7 +28,28 @@ const HomeStack = createStackNavigator();
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Instagram" component={HomeScreen} />
+      <HomeStack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Instagram',
+          headerLeftContainerStyle: {
+            marginLeft: 10,
+          },
+          headerRightContainerStyle: {
+            marginRight: 15,
+          },
+          headerTitle: () => (
+            <Image name="logo" source={logo} resizeMode='contain' style={{ width: 135, alignSelf: 'center' }} />
+          ),
+          headerLeft: () => (
+            <Feather name="camera" size={30} color={'#000'} />
+          ),
+          headerRight: () => (
+            <Ionicons name="paper-plane-outline" size={30} color='#545454' />
+          ),
+        }}
+      />
     </HomeStack.Navigator>
   );
 }
