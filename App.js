@@ -10,6 +10,7 @@ import ProfileScreen from './src/screens/ProfileScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Foundation from 'react-native-vector-icons/Foundation';
 import Feather from 'react-native-vector-icons/Feather';
@@ -17,8 +18,17 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-
 const Tab = createBottomTabNavigator();
+
+const HomeStack = createStackNavigator();
+
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen name="Instagram" component={HomeScreen} />
+    </HomeStack.Navigator>
+  );
+}
 
 const App = () => {
   return (
@@ -48,7 +58,7 @@ const App = () => {
           inactiveTintColor: 'gray',
           showLabel: false
         }}>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Discovery" component={DiscoveryScreen} />
         <Tab.Screen name="Post" component={PostScreen} />
         <Tab.Screen name="Navigation" component={NotificationScreen} />
