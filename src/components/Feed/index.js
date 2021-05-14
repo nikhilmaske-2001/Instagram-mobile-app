@@ -5,6 +5,7 @@ import Stories from '../Stories';
 
 const data = [
     {
+        id: '1',
         user: {
             imageUri: "https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png",
             name: "Facebook",
@@ -15,6 +16,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '2',
         user: {
             imageUri: "https://i.pinimg.com/originals/65/a4/24/65a4240ae9174aa1e5f3af541faba57b.jpg",
             name: "Snapchat",
@@ -25,6 +27,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '3',
         user: {
             imageUri: "https://i.pinimg.com/474x/21/29/59/212959f2ca79435e4a6b338f69a9efbc--twitter-icon-twitter-app.jpg",
             name: "Twitter",
@@ -35,6 +38,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '4',
         user: {
             imageUri: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             name: "Github",
@@ -45,6 +49,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '5',
         user: {
             imageUri: "https://i.pinimg.com/originals/91/9d/f0/919df067a8fbd22ce7b6f401b7688b35.png",
             name: "Whatsapp",
@@ -55,6 +60,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '6',
         user: {
             imageUri: "https://i.pinimg.com/originals/2d/2b/e2/2d2be2421911037d80f9921dc29d54c2.jpg",
             name: "Youtube",
@@ -65,6 +71,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '7',
         user: {
             imageUri: "https://i.pinimg.com/originals/c0/44/d1/c044d19025e6939e49af34610e2694d7.png",
             name: "LinkedIn",
@@ -75,6 +82,7 @@ const data = [
         postedAt: "5 minutes ago",
     },
     {
+        id: '8',
         user: {
             imageUri: "https://i.pinimg.com/474x/13/bc/eb/13bceb594ac9faf0ecd37638c81ffea7.jpg",
             name: "Printerest",
@@ -91,6 +99,7 @@ const Feed = () => {
         <FlatList
             data={data}
             renderItem={({ item }) => <Post post={item} />}
+            keyExtractor={({ id }) => id}
             ListHeaderComponent={Stories}
         />
 
